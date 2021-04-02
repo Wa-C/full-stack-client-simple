@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link} from "react-router-dom";
+import {UserContext} from '../../App'
 
 const Header = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-light ">
@@ -12,6 +14,10 @@ const Header = () => {
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="#">ID:{loggedInUser.email}</a>
+      </li>
+
       <li class="nav-item active">
         <Link to="Home" class="nav-link" >Home <span class="sr-only">(current)</span></Link>
       </li>
@@ -25,7 +31,7 @@ const Header = () => {
         <a class="nav-link" href="#">Deals</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link btn btn-warning" href="#">Login</a>
+        <Link to="Login" class="nav-link btn btn-warning" href="#">Login</Link>
       </li>
     </ul>
     

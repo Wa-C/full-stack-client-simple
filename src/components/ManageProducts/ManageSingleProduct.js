@@ -3,6 +3,20 @@ import React from 'react';
 const ManageSingleProduct = (props) => {
 
     const {_id, name, price, weight,imageURL} = props.product;
+
+    function deleteProduct(id){
+      fetch(`http://localhost:5055/delete/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+      }
+      })
+      .then (res => res.json())
+      .then(res => {
+        console.log('deleted',res);
+      })
+    }
+
     return (
         <div>
             <table class="table table-striped container">
@@ -14,7 +28,7 @@ const ManageSingleProduct = (props) => {
       <td scope="row">${price}</td>
       <td scope="row">{weight}</td>
       <td>
-          <button class="btn btn-danger">Delete</button>
+          <button onClick={()=> deleteProduct(_id)} class="btn btn-danger">Delete</button>
       </td>
     </tr>
    
