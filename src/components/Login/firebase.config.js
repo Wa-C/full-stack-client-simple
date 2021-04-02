@@ -1,11 +1,11 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAaPfaWwP39OBYjc5egyZhr2OGZdeR4L9E",
-    authDomain: "city-riders-2cd4a.firebaseapp.com",
-    projectId: "city-riders-2cd4a",
-    storageBucket: "city-riders-2cd4a.appspot.com",
-    messagingSenderId: "959022744323",
-    appId: "1:959022744323:web:2de7343b836d813899df36"
-  };
+  apiKey: "AIzaSyBOVQ3rMW4KVyEGcY71fHrZVt33wSEanJQ",
+  authDomain: "full-stack-1-46dfd.firebaseapp.com",
+  projectId: "full-stack-1-46dfd",
+  storageBucket: "full-stack-1-46dfd.appspot.com",
+  messagingSenderId: "808498513106",
+  appId: "1:808498513106:web:c14eb7e9da48f02d33990b"
+};
 
   export default firebaseConfig;
 

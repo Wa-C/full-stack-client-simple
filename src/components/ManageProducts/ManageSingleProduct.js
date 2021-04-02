@@ -5,6 +5,7 @@ const ManageSingleProduct = (props) => {
     const {_id, name, price, weight,imageURL} = props.product;
 
     function deleteProduct(id){
+      // console.log(event.target);
       fetch(`http://localhost:5055/delete/${id}`, {
         method: 'DELETE',
         headers: {

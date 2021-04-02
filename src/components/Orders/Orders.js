@@ -1,23 +1,20 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router';
+import React, { useContext } from 'react';
 import { UserContext } from '../../App';
 
-const Checkout = () => {
-
+const Orders = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    
-
-
     return (
         <div>
+            <div>
             <div class="card container">
   <div class="card-body">
   <p>Customer Name : {loggedInUser.name}</p>
+  <p>Products : </p>
   </div>
 </div>
+        </div>
         </div>
     );
 };
 
-export default Checkout;
+export default Orders;
