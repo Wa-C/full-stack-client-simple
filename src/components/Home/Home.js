@@ -1,3 +1,4 @@
+import { CircularProgress, LinearProgress } from '@material-ui/core';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -17,7 +18,6 @@ const Home = () => {
 
 
 
-
     return (
         <div className="container">
             <form class="form-inline my-2 my-lg-0 d-flex justify-content-center">
@@ -28,6 +28,11 @@ const Home = () => {
     <br></br>
 
         <div  className="row">
+            {
+                products.length === 0 && <div style={{"paddingLeft":"500px","paddingTop":"150px"}}>
+                    <CircularProgress color="secondary" />
+                </div>
+            }
             {
                 products.map(product => <Product product={product} />)
                 
