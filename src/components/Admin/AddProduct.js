@@ -16,7 +16,7 @@ const AddProduct = () => {
       weight: data.weight,
       imageURL: imageURL
     };
-    const url = `http://localhost:5055/addProduct`
+    const url = `https://sheltered-thicket-81559.herokuapp.com/addProduct`
     console.log(productData);
 
     fetch(url, {

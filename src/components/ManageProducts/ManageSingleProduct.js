@@ -6,7 +6,7 @@ const ManageSingleProduct = (props) => {
 
     function deleteProduct(id){
       // console.log(event.target);
-      fetch(`http://localhost:5055/delete/${id}`, {
+      fetch(`https://sheltered-thicket-81559.herokuapp.com/delete/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'
